@@ -101,7 +101,7 @@ const TransitTimes = ({ stationID }: stationID) => {
   // const TransitTimes: React.FC<Props> = ({ stationID }) => {};
   const [data, setData] = useState<DisplayTime | null>(null);
 
-  function geTTimes(): Promise<DisplayTime> {
+  function getTimes(): Promise<DisplayTime> {
     const url = BASE_API_URL + stationID;
     return fetch(url)
       .then((res) => res.json())
